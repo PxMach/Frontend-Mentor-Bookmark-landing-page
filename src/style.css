@@ -503,9 +503,9 @@ nav ul .nav-link {
    .extension {
       margin-bottom: 7rem;
    }
-   /* .extension > p {
-      padding: 0 16.5rem;
-   } */
+   .extension > p {
+      padding: 0 24rem;
+   }
    .ext {
       display: flex;
       justify-content: center;
@@ -524,7 +524,7 @@ nav ul .nav-link {
 
    /* Questions */
    .box-questions {
-      /* padding: 0 16.5rem; */
+      padding: 0 25rem;
       display: flex;
       flex-direction: column;
    }
@@ -535,8 +535,7 @@ nav ul .nav-link {
    }
 
    .box-questions button {
-      /* margin: 0 20rem 5rem; */
-      margin: 0;
+      margin: 0 20rem 5rem;
    }
 
    /* contact*/
@@ -545,7 +544,7 @@ nav ul .nav-link {
    }
 
    .contact h3 {
-      /* padding: 0 28rem; */
+      padding: 0 28rem;
    }
    .contact form {
       display: flex;
