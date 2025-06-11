@@ -3,6 +3,10 @@ const topnavClose = document.querySelector(".topnav_close");
 const topnavMenu = document.querySelector(".topnav_menu");
 const topHeadBookmark = document.querySelector(".tophead_bookmark");
 
+const titleQuestions = document.querySelectorAll(".title-question");
+const arrowDown = document.querySelectorAll(".arrow-down");
+const reponses = document.querySelectorAll(".reponse");
+
 let currentSlide = 1;
 
 const firstBtn = document.querySelector(".first-btn");
@@ -44,7 +48,7 @@ topnavClose.addEventListener("click", () => {
 });
 
 function updateSlide() {
-  title_change.textContent = slides[currentSlide - 1].title;
+   title_change.textContent = slides[currentSlide - 1].title;
    para.textContent = slides[currentSlide - 1].paragraph;
 }
 firstBtn.addEventListener("click", () => {
@@ -60,3 +64,22 @@ thirdBtn.addEventListener("click", () => {
    updateSlide();
 });
 
+titleQuestions.forEach((titleQuestion) => {
+   titleQuestion.addEventListener("click", () => {
+      // Trouver le conteneur parent de la question
+      const questionContent = titleQuestion.closest(".questions-content");
+      // Trouver la réponse dans ce conteneur
+      const reponse = questionContent.querySelector(".reponse");
+
+      // Fermer toutes les autres réponses
+      reponses.forEach((r) => {
+         if (r !== reponse) {
+            r.style.display = "none";
+         }
+      });
+
+      // Basculer l'affichage de la réponse cliquée
+      reponse.style.display =
+         reponse.style.display === "flex" ? "none" : "flex";
+   });
+});
