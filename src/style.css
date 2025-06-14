@@ -450,7 +450,7 @@ nav ul .nav-link {
    .log .topnav_link:hover {
       color: var(--Red_400);
       background-color: white;
-      border: 1px solid var(--Red_400);
+      border: 2px solid var(--Red_400);
    }
    .top-social {
       display: none;
